@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "61cf6f46-d0ef-4f98-9910-8ec9dd7c4db7",
+		"name": "Igho_mat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get books by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/api/external-books?name=A Game of Throness",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"external-books"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "A Game of Throness"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"igho\",\n    \"isbn\": \"978-0553103511\",\n    \"authors\": \"igho\",\n    \"country\": \"nigeria\",\n    \"number_of_pages\": 232,\n    \"publisher\": \"igho mat\",\n    \"release_date\": \"1996-08-01T00:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/books?release_date=1999-02-02T00:00:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					],
+					"query": [
+						{
+							"key": "release_date",
+							"value": "1999-02-02T00:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
